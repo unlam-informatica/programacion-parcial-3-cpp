@@ -5,9 +5,11 @@
 
 #include "FiguraInvalidaException.h"
 
-
-
-
-
+class Figura
+{
+public:
+    virtual ~Figura(){};
+    virtual double area() const = 0;
+};
 
 #endif // FIGURA_H_

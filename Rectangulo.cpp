@@ -1,5 +1,15 @@
-/**//* 22.333.444-PEREZ_DEL_RIO,JuanManuel-(07-2299) *//**/
-
 #include "Rectangulo.h"
+#include "FiguraInvalidaException.h"
 
+Rectangulo::Rectangulo(double _base, double _altura): base(_base), altura(_altura)
+{
+    if(_base <= 0 || _altura <= 0)
+    {
+        throw FiguraInvalidaException();
+    }
+}
 
+double Rectangulo::area() const
+{
+    return this->base * this->altura;
+};
